@@ -219,7 +219,7 @@ input:focus,select:focus{border-color:var(--gold)}
 <div><p class="kicker">الموقع</p><h2>نلتقيك<br/><em>بالكرادة.</em></h2></div>
 <div class="visit-info">
 <p>فرع مقهى أنا وليلى، مقابل كليريا</p>
-<p>السبت – الخميس · 11 ص – 10 م<br/>الجمعة · 2 م – 10 م</p>
+<p>السبت – الخميس · 11 ص – 12 بليل<br/>الجمعة · 2 م – 12 بليل</p>
 <a class="map" href="https://www.google.com/maps?q=33.301429748535156,44.42384719848633&amp;z=17&amp;hl=en" rel="noopener" target="_blank">افتح الخريطة ↗</a>
 </div>
 </div>
@@ -295,7 +295,7 @@ input:focus,select:focus{border-color:var(--gold)}
     if (!day.value) return;
     const d = new Date(day.value + 'T12:00:00');
     const start = d.getDay() === 5 ? 14*60 : 11*60;
-    for (let mins = start; mins <= 21*60+45; mins += 15) {
+    for (let mins = start; mins < 24*60; mins += 15) {
       const h = Math.floor(mins/60), m = mins % 60;
       const o = document.createElement('option');
       o.value = `${pad(h)}:${pad(m)}`;
